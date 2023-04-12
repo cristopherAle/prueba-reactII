@@ -1,0 +1,46 @@
+.imgNavBar{
+  height: 64px;
+  width: auto;
+}
+
+.productos{
+  display: flex;
+  flex-direction: row;
+}
+
+.activo{
+  color:White;
+  animation-duration: 0.5s;
+  animation-name: slidein;
+
+}
+
+.imgPortada{
+  display: grid;
+  place-content: center;
+
+}
+
+.galeria {
+  display: grid;
+  gap: 10px;
+}
+
+.btnOrden{
+    display: flex;
+    flex-direction: column;
+}
+
+.detailPizza{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+	height: 30%px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 10px;
+
+  box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+}
