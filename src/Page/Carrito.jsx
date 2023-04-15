@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import React, { useContext } from 'react'
 import { MyContext } from '../context/MyContext';
 
 const Carrito = () => {

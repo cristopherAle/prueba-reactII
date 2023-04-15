@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Pizza from '../assets/img/Pizza.svg'
 const clp = new Intl.NumberFormat("es-CL");
 
@@ -40,7 +40,9 @@ const Productos = ({desc, id, img, ingredients, name, price }) => {
                   <button className='btn btn-warning'
                   onClick={HandleClick}
                   >Detalle</button>
-                  <button className='btn btn-warning'>Añadir al carro</button>
+                  <button className='btn btn-warning'>
+                    <Link to="/carrito" style={{textDecoration:'none', color:'black'}}>Añadir al Carro</Link>
+                  </button>
               </div>
               
             </div>
