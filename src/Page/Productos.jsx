@@ -1,31 +1,46 @@
 import React from 'react'
-import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
+import Pizza from '../assets/img/Pizza.svg'
 const clp = new Intl.NumberFormat("es-CL");
 
-const Productos = ({desc, id, img, name, price }) => {
+const Productos = ({desc, id, img, ingredients, name, price }) => {
    
-  const navigate = useNavigate()
+ const navigate = useNavigate()
 
    const HandleClick = ()=>{
     navigate(`detalle/${id}`)
    }
+
+
   return (
     <>
-      
-          <div className="container card" style={{width: "16rem"}}>
+      <div className="container card p-3" style={{width: "16rem"}}>
 
           <img src={img}className="card-img-top" alt="Imagen de Pizza"/>
             <div className="card-body">
-              <h5 className="card-title">{name}</h5>
-              {/* <p className="card-text">{desc}</p> */}
+              <h5 className="card-title">Pizza {name}</h5>
+   
               <hr />
+             <h5>Ingredientes:</h5>
+              <ul className="listIngredient">
+                 {ingredients.map((ingredient, index) => (
+                  
+                  <li key={index}>
+                    <img className='imgLi' src={Pizza} alt="imagen Pizza" />
+                   {ingredient} 
+                  
+                  </li>
+                ))}
+              </ul>
+
+              <hr />
+
               <h5 className="card-title">${clp.format(price)}</h5>
               <div>
-                    <button className='btn btn-warning'
-                    onClick={HandleClick}
-                    >Detalle</button>
-                    <button className='btn btn-warning'>Añadir al carro</button>
+                  <button className='btn btn-warning'
+                  onClick={HandleClick}
+                  >Detalle</button>
+                  <button className='btn btn-warning'>Añadir al carro</button>
               </div>
               
             </div>

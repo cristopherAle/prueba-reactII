@@ -5,14 +5,14 @@ import Productos from './Productos'
 
 
 const HomePage = () => {
-  const {dataPizza, setDataPizza} = useContext(MyContext)
+  const {dataPizza} = useContext(MyContext)
   
   return (
-    <div>
-        <h1>Home Page</h1>
+    <div className='container'>
+        <h1>Nuestros Productos</h1>
+        <hr />
           <div className='container mt-5'>
             <div className='row d-flex justify-content-between gap-5'>
-              {/* {dataPizza.map(pizza =><Productos key={pizza.id} pizza={pizza}/>)} */}
               {dataPizza.map(pizza =><Productos key={pizza.id} {...pizza}/>)}
             </div>
           </div>
